@@ -16,7 +16,7 @@ class Snippet(models.Model):
     code = models.TextField()
     linenos = models.BooleanField(default=False)
     owner = models.ForeignKey('auth.User', related_name='snippets')
-    hightlighted = models.TextField()
+    highlighted = models.TextField()
     language = models.CharField(
         choices=LANGUAGE_CHOICES,
         default='python',

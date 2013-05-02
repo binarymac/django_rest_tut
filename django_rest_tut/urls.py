@@ -11,8 +11,8 @@ urlpatterns = patterns(
         r'^api-auth/',
         include('rest_framework.urls', namespace='rest_framework')
     ),
-
     url(r'^quickstart/', include('quickstart.urls')),
+    url(r'^$', 'snippets.views.api_root'),
     url(r'^', include('snippets.urls')),
 
 )
